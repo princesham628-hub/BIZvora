@@ -30,10 +30,8 @@ const WhatsAppIcon = () => (
 );
 
 const socials = [
-  { icon: <FacebookIcon />, href: 'https://facebook.com', label: 'Facebook' },
-  { icon: <InstagramIcon />, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: <LinkedInIcon />, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: <WhatsAppIcon />, href: 'https://wa.me/', label: 'WhatsApp' },
+  { icon: <InstagramIcon />, href: 'https://instagram.com/bizvoraa', label: 'Instagram' },
+  { icon: <WhatsAppIcon />, href: 'https://wa.me/919353974453', label: 'WhatsApp' },
 ];
 
 export default function Footer() {
@@ -91,9 +89,9 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-lg tracking-widest text-white mb-4">CONTACT US</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>📧 hello@bizvora.com</li>
-              <li>📞 +1 (800) 123-4567</li>
-              <li>📍 Mumbai, Maharashtra, India</li>
+              <li>📧 samshamaray@gmail.com</li>
+              <li>📞 +91 9353974453</li>
+              <li>📍 Nelamangla, Bangalore 562123</li>
             </ul>
           </div>
         </div>

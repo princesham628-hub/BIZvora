@@ -1,13 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Zap, Shield } from 'lucide-react';
 
-const stats = [
-  { value: '500+', label: 'Clients Served' },
-  { value: '98%', label: 'Satisfaction Rate' },
-  { value: '12+', label: 'Years Experience' },
-  { value: '50+', label: 'Team Experts' },
-];
-
 const features = [
   { icon: <TrendingUp size={28} />, title: 'Data-Driven Growth', desc: 'We leverage analytics and insights to craft strategies that deliver measurable ROI.' },
   { icon: <Zap size={28} />, title: 'Rapid Execution', desc: 'From concept to launch, we move fast without sacrificing quality or precision.' },
@@ -37,12 +30,12 @@ export default function Home() {
             </div>
 
             <h1 className="font-display text-[clamp(3rem,8vw,7rem)] leading-none tracking-wider mb-6 animate-fade-up opacity-0-start" style={{ animationFillMode: 'forwards' }}>
-              <span className="text-white">YOUR BUSINESS,</span><br />
-              <span className="text-[#7CFC00]">AMPLIFIED.</span>
+              <span className="text-white">Grow Your Business</span><br />
+              <span className="text-[#7CFC00]">Faster with Bizvora</span>
             </h1>
 
             <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-10 animate-fade-up opacity-0-start animate-delay-200" style={{ animationFillMode: 'forwards' }}>
-              BizVora delivers end-to-end digital solutions — from strategy to execution — that transform ambitious businesses into market leaders.
+              We help local businesses generate leads, increase visibility, and boost sales using smart digital strategies.
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-up opacity-0-start animate-delay-300" style={{ animationFillMode: 'forwards' }}>
@@ -54,18 +47,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="border-y border-white/5 bg-brand-gray">
-        <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div className="font-display text-4xl text-[#7CFC00] tracking-wider">{s.value}</div>
-              <div className="text-gray-500 text-sm mt-1 uppercase tracking-widest">{s.label}</div>
-            </div>
-          ))}
         </div>
       </section>
 

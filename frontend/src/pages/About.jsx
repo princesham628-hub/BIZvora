@@ -8,13 +8,6 @@ const values = [
   { icon: <Eye size={22} />, title: 'Transparency', desc: 'Honest communication and clear reporting — no surprises, no fluff.' },
 ];
 
-const team = [
-  { name: 'Aryan Shah', role: 'CEO & Co-Founder', initials: 'AS' },
-  { name: 'Priya Mehta', role: 'Head of Strategy', initials: 'PM' },
-  { name: 'Rohan Joshi', role: 'Lead Developer', initials: 'RJ' },
-  { name: 'Neha Kapoor', role: 'Marketing Director', initials: 'NK' },
-];
-
 export default function About() {
   return (
     <div>
@@ -62,40 +55,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Story */}
-      <section className="bg-brand-gray border-y border-white/5 py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            <div>
-              <p className="text-[#7CFC00] uppercase tracking-widest text-sm font-medium mb-4">Our Story</p>
-              <h2 className="section-title text-white mb-6">FROM HUMBLE<br /><span className="text-[#7CFC00]">BEGINNINGS</span></h2>
-              <p className="text-gray-400 leading-relaxed mb-4">
-                BizVora started in a small co-working space in Mumbai with a simple belief: that every business deserves access to the tools and expertise to thrive in the digital age.
-              </p>
-              <p className="text-gray-400 leading-relaxed mb-4">
-                Over the past decade, we've grown from a 3-person startup into a 50-strong team of strategists, developers, designers, and marketers — all united by a passion for building businesses that matter.
-              </p>
-              <p className="text-gray-400 leading-relaxed">
-                Today, our work spans 20+ industries and 15 countries. But our core commitment remains unchanged: deliver real results, build real relationships.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { year: '2012', event: 'Founded in Mumbai' },
-                { year: '2015', event: 'First 100 clients' },
-                { year: '2018', event: 'Expanded to 3 cities' },
-                { year: '2024', event: '500+ clients globally' },
-              ].map((m) => (
-                <div key={m.year} className="card-dark p-6">
-                  <div className="text-[#7CFC00] font-display text-3xl mb-2">{m.year}</div>
-                  <div className="text-gray-300 text-sm">{m.event}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Values */}
       <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
@@ -111,26 +70,6 @@ export default function About() {
               </div>
               <h3 className="text-white font-semibold mb-2">{v.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="max-w-6xl mx-auto px-6 pb-24">
-        <div className="text-center mb-14">
-          <p className="text-[#7CFC00] uppercase tracking-widest text-sm font-medium mb-3">The People</p>
-          <h2 className="section-title text-white">MEET THE <span className="text-[#7CFC00]">TEAM</span></h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-          {team.map((t) => (
-            <div key={t.name} className="card-dark p-7 text-center group">
-              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center font-display text-xl text-brand-dark group-hover:scale-110 transition-transform duration-200"
-                style={{ background: '#7CFC00' }}>
-                {t.initials}
-              </div>
-              <h3 className="text-white font-semibold text-sm">{t.name}</h3>
-              <p className="text-gray-500 text-xs mt-1">{t.role}</p>
             </div>
           ))}
         </div>

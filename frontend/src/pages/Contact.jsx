@@ -73,9 +73,9 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-5">
             {[
-              { icon: <Mail size={20} />, label: 'Email Us', value: 'hello@bizvora.com', href: 'mailto:hello@bizvora.com' },
-              { icon: <Phone size={20} />, label: 'Call Us', value: '+1 (800) 123-4567', href: 'tel:+18001234567' },
-              { icon: <MapPin size={20} />, label: 'Visit Us', value: 'Mumbai, Maharashtra, India', href: '#' },
+              { icon: <Mail size={20} />, label: 'Email Us', value: 'samshamaray@gmail.com', href: 'mailto:samshamaray@gmail.com' },
+              { icon: <Phone size={20} />, label: 'WhatsApp', value: '+91 9353974453', href: 'https://wa.me/919353974453' },
+              { icon: <MapPin size={20} />, label: 'Visit Us', value: 'Nelamangla, Bangalore 562123', href: '#' },
             ].map((c) => (
               <a key={c.label} href={c.href} className="card-dark p-6 flex items-start gap-4 block group">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 text-[#7CFC00] group-hover:bg-[#7CFC00] group-hover:text-black transition-all duration-200"
@@ -94,10 +94,8 @@ export default function Contact() {
               <p className="text-gray-500 text-xs uppercase tracking-widest mb-4">Follow Us</p>
               <div className="flex gap-3">
                 {[
-                  { label: 'FB', href: 'https://facebook.com' },
-                  { label: 'IG', href: 'https://instagram.com' },
-                  { label: 'LI', href: 'https://linkedin.com' },
-                  { label: 'WA', href: 'https://wa.me/' },
+                  { label: 'IG', href: 'https://instagram.com/bizvoraa' },
+                  { label: 'WA', href: 'https://wa.me/919353974453' },
                 ].map((s) => (
                   <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                     className="w-10 h-10 rounded border border-white/10 flex items-center justify-center text-xs font-bold text-gray-400 hover:text-[#7CFC00] hover:border-[#7CFC00] transition-all duration-200">

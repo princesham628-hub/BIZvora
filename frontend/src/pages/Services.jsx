@@ -6,40 +6,68 @@ import {
 
 const services = [
   {
-    icon: <Globe size={32} />,
-    title: 'Digital Strategy',
-    desc: 'We craft comprehensive digital roadmaps that align your business goals with market opportunities. From audits to action plans, we set the foundation for growth.',
-    tags: ['Roadmapping', 'Market Research', 'Competitor Analysis'],
-  },
-  {
-    icon: <Code2 size={32} />,
-    title: 'Web Development',
-    desc: 'High-performance websites and web apps built with modern frameworks. We deliver fast, secure, scalable solutions that convert visitors into customers.',
-    tags: ['React', 'Node.js', 'E-commerce', 'CMS'],
-  },
-  {
     icon: <Megaphone size={32} />,
-    title: 'Digital Marketing',
-    desc: 'Multi-channel campaigns that drive real results. We combine creativity with data to ensure your brand reaches the right audience at the right time.',
-    tags: ['Social Media', 'Email Marketing', 'PPC', 'Content'],
-  },
-  {
-    icon: <Search size={32} />,
-    title: 'SEO & Analytics',
-    desc: 'Dominate search rankings with our proven SEO methodology. We continuously analyze and optimize to ensure sustained organic growth.',
-    tags: ['On-page SEO', 'Technical SEO', 'Google Analytics', 'Reporting'],
-  },
-  {
-    icon: <BarChart2 size={32} />,
-    title: 'Business Intelligence',
-    desc: 'Turn raw data into actionable insights. Our BI solutions help you make smarter decisions faster with intuitive dashboards and deep analytics.',
-    tags: ['Dashboards', 'KPI Tracking', 'Forecasting', 'Reporting'],
+    title: 'Digital Marketing Services',
+    items: [
+      'Social Media Management',
+      'Performance Marketing',
+      'Lead Generation',
+      'WhatsApp Marketing',
+      'Influencer / Collaboration Marketing',
+    ],
   },
   {
     icon: <HeartHandshake size={32} />,
-    title: 'Brand Consulting',
-    desc: 'Build a brand that resonates and endures. We help define your identity, messaging, and positioning to stand out in crowded markets.',
-    tags: ['Identity', 'Messaging', 'Positioning', 'Design'],
+    title: 'Branding & Creative Services',
+    items: [
+      'Basic Branding & Setup',
+      'Graphic Design',
+      'Video Editing',
+      'Photography & Videography',
+    ],
+  },
+  {
+    icon: <Globe size={32} />,
+    title: 'Website & Online Presence',
+    items: [
+      'Website / Landing Page Creation',
+      'Google Business Profile Optimization',
+      'E-Commerce Setup',
+    ],
+  },
+  {
+    icon: <BarChart2 size={32} />,
+    title: 'Business Automation & Tools',
+    items: [
+      'Billing Setup',
+      'WhatsApp Handling / Customer Support System',
+      'Employee Management System',
+    ],
+  },
+  {
+    icon: <Search size={32} />,
+    title: 'Business Growth & Consulting',
+    items: [
+      'Business Consulting',
+      'Idea Generation',
+      'Data Analysis',
+    ],
+  },
+  {
+    icon: <Megaphone size={32} />,
+    title: 'Marketing & Sales Expansion',
+    items: [
+      'Affiliate Marketing',
+      'Reselling Business',
+    ],
+  },
+  {
+    icon: <Globe size={32} />,
+    title: 'Career & Income Opportunities',
+    items: [
+      'Freelancing',
+      'Investment Guidance',
+    ],
   },
 ];
 
@@ -72,14 +100,13 @@ export default function Services() {
                 {s.icon}
               </div>
               <h3 className="text-white font-semibold text-xl mb-3">{s.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-grow">{s.desc}</p>
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {s.tags.map((tag) => (
-                  <span key={tag} className="text-xs border border-white/10 text-gray-500 rounded px-2 py-1">
-                    {tag}
-                  </span>
+              <ul className="text-gray-400 text-sm leading-relaxed mb-5 flex-grow space-y-2">
+                {s.items.map((item) => (
+                  <li key={item} className="list-disc list-inside">
+                    {item}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
