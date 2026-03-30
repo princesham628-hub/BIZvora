@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import axios from 'axios';
-
-const API_URL = 'http://localhost:5000/api/contact';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -33,17 +30,26 @@ export default function Contact() {
       setErrors(validationErrors);
       return;
     }
+
     setStatus('loading');
+
     try {
-      const res = await axios.post(API_URL, form);
-      if (res.data.success) {
-        setStatus('success');
-        setServerMsg(res.data.message);
-        setForm({ name: '', email: '', message: '' });
-      }
+      const formEl = e.target;
+      const formData = new FormData(formEl);
+      // Netlify form submission endpoint from static HTML form
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      setStatus('success');
+      setServerMsg('Thanks! Your message has been sent successfully.');
+      setForm({ name: '', email: '', message: '' });
+      setErrors({});
     } catch (err) {
       setStatus('error');
-      setServerMsg(err.response?.data?.error || 'Something went wrong. Please try again.');
+      setServerMsg('Something went wrong. Please try again.');
     }
   };
 
@@ -119,8 +125,17 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} noValidate>
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  noValidate
+                >
                   <h3 className="font-display text-2xl text-white tracking-widest mb-8">SEND A MESSAGE</h3>
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
 
                   {/* Name */}
                   <div className="mb-5">
